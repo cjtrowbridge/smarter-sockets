@@ -1,2 +1,2 @@
 # Smarter Sockets
-Arduino wifi controlled power sockets.
+Arduino web-controlled power sockets.
