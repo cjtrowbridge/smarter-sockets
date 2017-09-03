@@ -4,14 +4,24 @@
  * @author Miguel Alvarez 
  * Updated by CJ Trowbridge
  *  
- * @date    2-May-2016
+ * @date    2017-09-02
  *  
- * @details A sketch that displays an HTML page with seven 
- *          buttons to toggle three digital pins. You may
- *          connect an LED to pins 2,3, 5,6,7,8,9 . Then visit the IP 
- *          address (printed in the serial window) in a web browser. 
+ * @details Displays an HTML5/Bootsrap page with seven 
+ *          buttons to toggle the digital pins. Connect
+ *          relay drivers to pins 2,3, 5,6,7,8,9 . 
+ *          Then visit the IP address (printed in the 
+ *          serial window) in a web browser. 
  *          
  * @circuit Stack the W5200 Ethernet Shield from Seeed Studio
+
+TODO
+make the webpage be bootstrap 4
+make the toggles be actual toggles
+make the page aware of each socket's status when it loads
+also make it aware when they change
+
+use one gfci socket and as many other sockets as will fit in a gang-box.
+
  */
 
 #include <SPI.h>
@@ -96,7 +106,7 @@ void loop() {
           client.print("<h1>LED Toggle Webpage</h1>");
  
           // Create the HTML button code e.g. <button id="xx" class="led">Toggle Pin xx</button> where xx is the pin number
-  	  // In the <button id="xx" class="led"> tags, the ID attribute is the value sent to the arduino via the "pin" GET parameter
+  	       // In the <button id="xx" class="led"> tags, the ID attribute is the value sent to the arduino via the "pin" GET parameter
            for(int i=0; i<sizeof(pins)/sizeof(pins[0]);i++)
            {
               String buttonHTML = "<button id=\"";
