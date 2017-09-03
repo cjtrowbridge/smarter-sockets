@@ -1,2 +1,2 @@
-# socket-block
+# Smarter Sockets
 Arduino wifi controlled power sockets.
