@@ -19,7 +19,6 @@ make the webpage be bootstrap 4
 make the toggles be actual toggles
 make the page aware of each socket's status when it loads
 also make it aware when they change
-
 use one gfci socket and as many other sockets as will fit in a gang-box.
 
  */
